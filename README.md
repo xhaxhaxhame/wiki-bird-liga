@@ -1,2 +1,2 @@
-# wiki-bird-liga
+# wiki-brainrot
 page wiki 
