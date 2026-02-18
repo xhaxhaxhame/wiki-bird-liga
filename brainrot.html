@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Brainrots - Steal a Brainrot Wiki</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainrots — Steal a Brainrot Wiki</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo-text">🧠 Steal a Brainrot Wiki</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#">Guide</a></li>
-            <li><a href="#">Communauté</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="logo-text">🧠 Steal a Brainrot Wiki</div>
+    <ul class="nav-links">
+    </ul>
+  </nav>
 
-    <div class="container">
+  <div class="container">
 
-        <!-- MW PANEL -->
-        <aside class="mw-panel">
-            <h2>Navigation</h2>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="brainrot.html">Brainrots</a></li>
-                <li><a href="#">Machines</a></li>
-                <li><a href="#">Rituels</a></li>
-                <li><a href="#">Événements</a></li>
-                <li><a href="#">Objets</a></li>
-                <li><a href="#">Stratégies</a></li>
-            </ul>
-        </aside>
+    <!-- MW PANEL (identique partout) -->
+    <aside class="mw-panel">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a class="active" href="brainrot.html">Brainrots</a></li>
 
-        <!-- CONTENU PRINCIPAL -->
-        <main class="main-content">
+        <li class="has-dropdown">
+          <a href="nouveautés.html">Nouveautés</a>
+          <ul class="dropdown">
+            <li><a href="nouveautés.html#mutations">Nouvelles mutations</a></li>
+            <li><a href="nouveautés.html#seasons">Nouvelles saisons</a></li>
+            <li><a href="nouveautés.html#events">Événements</a></li>
+            <li><a href="nouveautés.html#balance">Équilibrages</a></li>
+          </ul>
+        </li>
+      </ul>
 
-            <main class="main-content">
+      <div class="separator"></div>
 
-    <div class="card"><div class="card-text"><h3 class="rarity commun">Commun</h3></div></div>
+      <h2>Guides</h2>
+      <ul>
+        <li><a href="#">Valeurs / Trading</a></li>
+        <li><a href="#">Tier List</a></li>
+      </ul>
+    </aside>
 
-    <div class="card"><div class="card-text"><h3 class="rarity rare">Rare</h3></div></div>
+    <!-- CONTENU -->
+    <main class="main-content">
 
-    <div class="card"><div class="card-text"><h3 class="rarity epique">Epique</h3></div></div>
+      <section class="rarity-list">
+        <a class="rarity-card commun" href="rarity-commun.html">
+  <img src="images/normal.webp" alt="Commun">
+  <div class="rarity-label">Commun</div>
+</a>
 
-    <div class="card"><div class="card-text"><h3 class="rarity legendaire">Légendaire</h3></div></div>
+<a class="rarity-card rare" href="rarity-rare.html">
+  <img src="images/rare.webp" alt="Rare">
+  <div class="rarity-label">Rare</div>
+</a>
 
-    <!-- NOUVELLE CATÉGORIE -->
-    <div class="card"><div class="card-text"><h3 class="rarity mythique">Mythique</h3></div></div>
+<a class="rarity-card epique" href="rarity-epique.html">
+  <img src="images/epic.webp" alt="Épique">
+  <div class="rarity-label">Épique</div>
+</a>
 
-    <div class="card"><div class="card-text"><h3 class="rarity god">Brainrot God</h3></div></div>
+<a class="rarity-card legendaire" href="rarity-legendaire.html">
+  <img src="images/legendaire.webp" alt="Légendaire">
+  <div class="rarity-label">Légendaire</div>
+</a>
 
-    <div class="card"><div class="card-text"><h3 class="rarity secret">Secret</h3></div></div>
+<a class="rarity-card mythique" href="rarity-mythique.html">
+  <img src="images/mythique.png" alt="Mythique">
+  <div class="rarity-label">Mythique</div>
+</a>
 
-    <div class="card"><div class="card-text"><h3 class="rarity og">OG</h3></div></div>
+<a class="rarity-card god" href="rarity-god.html">
+  <img src="images/brainrotgod.webp" alt="Brainrot God">
+  <div class="rarity-label">Brainrot God</div>
+</a>
 
-</main>
+<a class="rarity-card secret" href="rarity-secret.html">
+  <img src="images/secret.webp" alt="Secret">
+  <div class="rarity-label">Secret</div>
+</a>
 
+<a class="rarity-card og" href="rarity-og.html">
+  <img src="images/og.webp" alt="OG">
+  <div class="rarity-label">OG</div>
+</a>
+      </section>
 
-        </main>
-
-    </div>
+    </main>
+  </div>
 
 </body>
 </html>

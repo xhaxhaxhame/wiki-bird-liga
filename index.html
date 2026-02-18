@@ -1,84 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Steal a Brainrot Wiki</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Steal a Brainrot Wiki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo-text">🧠 Steal a Brainrot Wiki</div>
-        <ul class="nav-links">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Guide</a></li>
-            <li><a href="#">Communauté</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="logo-text">🧠 Steal a Brainrot Wiki</div>
+    <ul class="nav-links">
 
-    <div class="container">
+    </ul>
+  </nav>
 
-        <!-- MW PANEL -->
-        <aside class="mw-panel">
-            <h2>Navigation</h2>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="brainrot.html">Brainrots</a></li>
-                <li><a href="#">Machines</a></li>
-                <li><a href="#">Rituels</a></li>
-                <li><a href="#">Événements</a></li>
-                <li><a href="#">Objets</a></li>
-                <li><a href="#">Stratégies</a></li>
-            </ul>
-        </aside>
+  <div class="container">
 
-        <!-- BLOCS PRINCIPAUX -->
-        <main class="main-content">
+    <!-- MW PANEL (identique partout) -->
+    <aside class="mw-panel">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a class="active" href="index.html">Accueil</a></li>
+        <li><a href="brainrot.html">Brainrots</a></li>
 
-    <div class="card" onclick="location.href='brainrot.html'">
-        <div class="card-text">
-            <h3>Brainrots</h3>
-            <p>Découvrez tous les Brainrots disponibles dans le jeu.</p>
+        <li class="has-dropdown">
+          <a href="nouveautés.html">Nouveautés</a>
+          <ul class="dropdown">
+            <li><a href="nouveautés.html#mutations">Nouvelles mutations</a></li>
+            <li><a href="nouveautés.html#seasons">Nouvelles saisons</a></li>
+            <li><a href="nouveautés.html#events">Événements</a></li>
+            <li><a href="nouveautés.html#balance">Équilibrages</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <h2>Guides</h2>
+      <ul>
+        <li><a href="#">Valeurs / Trading</a></li>
+        <li><a href="#">Tier List</a></li>
+      </ul>
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="main-content">
+
+      <section class="hero">
+        <span class="badge">NEW • Update</span>
+        <h1>Update 4.2 — Shadow Mutation</h1>
+        <p>Nouveaux brainrots + équilibrages + event en cours. Le wiki est à jour.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="nouveautés.html#latest">Voir les nouveautés</a>
+          <a class="btn ghost" href="brainrot.html">Voir les brainrots</a>
         </div>
-        <div class="card-image">
-            <img src="brainrots.png" alt="Brainrots">
-        </div>
-    </div>
+      </section>
 
-    <div class="card">
-        <div class="card-text">
-            <h3>Machine</h3>
-            <p>Liste complète des machines et leurs fonctions.</p>
-        </div>
-        <div class="card-image">
-            <img src="machine.png" alt="Machine">
-        </div>
-    </div>
+      <!-- Bloc de fond derrière les 3 cartes -->
+      <section class="bg-block">
+        <div class="cards-grid">
+          <a href="brainrot.html" class="card">
+            <img src="images/brainrot.jpg" alt="Brainrots">
+            <div class="card-label">Brainrots</div>
+          </a>
 
-    <div class="card">
-        <div class="card-text">
-            <h3>Rituels</h3>
-            <p>Tous les rituels et leurs effets spéciaux.</p>
-        </div>
-        <div class="card-image">
-            <img src="rituels.png" alt="Rituels">
-        </div>
-    </div>
+          <a href="fuse.html" class="card">
+            <img src="images/fuze.png" alt="Fuze Machine">
+            <div class="card-label">Fuze Machine</div>
+          </a>
 
-    <div class="card">
-        <div class="card-text">
-            <h3>Evenements</h3>
-            <p>Événements spéciaux et contenus limités.</p>
+          <a href="rituels.html" class="card">
+            <img src="images/rituel.jpg" alt="Rituels">
+            <div class="card-label">Rituels</div>
+          </a>
         </div>
-        <div class="card-image">
-            <img src="events.png" alt="Evenements">
-        </div>
-    </div>
+      </section>
 
-</main>
+      <!-- Bloc de fond derrière le compteur -->
+      <section class="bg-block">
+        <section class="admin-countdown" id="admin-abuse">
+          <div class="countdown-head">
+            <h2>Prochaine Admin Abuse</h2>
+            <div class="countdown-meta">
+              <span class="pill">Thème : <strong id="themeName">Shadow Apocalypse</strong></span>
+              <span class="pill">Début : <strong id="eventDateTxt">—</strong></span>
+            </div>
+          </div>
 
-    </div>
+          <div class="countdown-box">
+            <div class="countdown-item"><span id="days">00</span><p>Jours</p></div>
+            <div class="countdown-item"><span id="hours">00</span><p>Heures</p></div>
+            <div class="countdown-item"><span id="minutes">00</span><p>Minutes</p></div>
+            <div class="countdown-item"><span id="seconds">00</span><p>Secondes</p></div>
+          </div>
+
+          <div class="countdown-bar">
+            <div class="countdown-progress" id="progress"></div>
+          </div>
+        </section>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // ⚠️ Modifie ici : date/heure + thème
+    const eventDate = new Date("2026-03-10T20:00:00");
+    const startWindow = new Date(eventDate.getTime() - (7 * 24 * 60 * 60 * 1000));
+    const theme = "Shadow Apocalypse";
+
+    document.getElementById("themeName").textContent = theme;
+    document.getElementById("eventDateTxt").textContent =
+      eventDate.toLocaleString(undefined, { weekday:"short", year:"numeric", month:"short", day:"numeric", hour:"2-digit", minute:"2-digit" });
+
+    function updateCountdown() {
+      const now = new Date();
+      const distance = eventDate.getTime() - now.getTime();
+      const clamp = (n) => Math.max(0, n);
+
+      const days = clamp(Math.floor(distance / (1000 * 60 * 60 * 24)));
+      const hours = clamp(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+      const minutes = clamp(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+      const seconds = clamp(Math.floor((distance % (1000 * 60)) / 1000));
+
+      document.getElementById("days").innerText = String(days).padStart(2, "0");
+      document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+
+      const total = eventDate.getTime() - startWindow.getTime();
+      const done = now.getTime() - startWindow.getTime();
+      const pct = Math.max(0, Math.min(100, (done / total) * 100));
+      document.getElementById("progress").style.width = pct + "%";
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 
 </body>
 </html>
